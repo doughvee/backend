@@ -47,9 +47,8 @@ class CarouselItemsController extends Controller
     {
         $validated = $request->validated();
 
-        $carouselItem = CarouselItems:: findOrFail($id);
-        
-        $carouselItem ->update($validated);
+        $carouselItem = CarouselItems::findOrFail($id);
+        $carouselItem->update($validated);
 
         return $carouselItem;
     }
